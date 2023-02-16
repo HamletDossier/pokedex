@@ -1,9 +1,14 @@
+import Pokemones from "./pages/Pokemones";
 
 
 
 function App() {
 
-  return (<h1 className=" bg-black text-gray-50">Hola mundo</h1>);
+  return (
+    <>
+      <Pokemones></Pokemones>
+    </>
+  );
 }
 
 export default App
