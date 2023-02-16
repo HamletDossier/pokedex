@@ -1,7 +1,8 @@
 import Types from "./enums/Types.enum";
 
 interface IPokemon{
-    id: string | number;
+    id: string;
+    url:string;
     img: string;
     name: string;
     des: string[];

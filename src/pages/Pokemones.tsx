@@ -1,9 +1,13 @@
+import toApi from "../Adapters/PokeApi.adapter";
 import { useGetPokemonsQuery } from "../Services/PokeApi.service";
 const Pokemones = () => {
 
   const {data, isError,isLoading}=useGetPokemonsQuery();
   if(isLoading) return <div>Loading...</div>;
-  console.log(data);
+
+ 
+ const pokemons = toApi(data);
+ console.log(pokemons);
   return (<>
       <div className="flex justify-center w-full">
         <div className="grid grid-cols-1">
