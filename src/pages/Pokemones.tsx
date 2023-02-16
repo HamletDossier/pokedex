@@ -1,4 +1,9 @@
+import { useGetPokemonsQuery } from "../Services/PokeApi.service";
 const Pokemones = () => {
+
+  const {data, isError,isLoading}=useGetPokemonsQuery();
+  if(isLoading) return <div>Loading...</div>;
+  console.log(data);
   return (<>
       <div className="flex justify-center w-full">
         <div className="grid grid-cols-1">
