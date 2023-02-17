@@ -5,7 +5,7 @@ export const PokeApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: 'https://pokeapi.co/api/v2'}),
     endpoints: (builder) => ({
         // Get all Pokemons
-        getPokemons: builder.query({query: () => '/pokemon?limit=12&offset=0',}),
+        getPokemons: builder.query({query: (page) => `/pokemon?limit=12&offset=${page}`,}),
 
     })
 })
