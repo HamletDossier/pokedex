@@ -9,7 +9,7 @@ const toApi = (Request:any):IPokemones[] =>{
     const pokemons:IPokemones[] = results.map(result => ({
         id:urlToId(result.url),
         img: `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${urlToId(result.url)}.png`,
-        name: result.name,
+        name: letterUpperCase(result.name),
         types:[Types[randomTypes()]],
         url:result.url
     }));
@@ -21,6 +21,10 @@ const urlToId = (url:IPokemon['url']):IPokemon['id'] => {
     const urlArray = url.split("/");
     const id = urlArray[urlArray.length - 2];
     return id.padStart(3,'0');
+}
+
+const letterUpperCase = (name:IPokemones['name']):IPokemones['name'] =>{
+    return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 const randomTypes = ():number=>{
