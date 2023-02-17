@@ -12,8 +12,8 @@ const Pokemones = () => {
           ) )}
         </div>
       </div>
-      <div className="flex justify-center w-full">
-        <span className=" bg-blue-400" onClick={() =>{ handelButton()}}>Load more Pokémon</span>
+      <div className="flex justify-center w-full py-8">
+        <span className=" bg-[#30a7d7] font-bold text-white py-1 px-3 rounded cursor-pointer" onClick={() =>{ handelButton()}}>Load more Pokémon</span>
       </div>
   </>)
 }
