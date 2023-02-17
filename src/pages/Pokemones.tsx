@@ -1,4 +1,5 @@
 import toApi from "../Adapters/PokeApi.adapter";
+import IteamPokemons from "../components/IteamPokemons";
 import { useGetPokemonsQuery } from "../Services/PokeApi.service";
 const Pokemones = () => {
 
@@ -11,12 +12,7 @@ const Pokemones = () => {
       <div className="flex justify-center w-full">
         <div className="grid grid-cols-1">
           {pokemons.map((pokemon,index) => (
-          <div className="card">
-            <img src={`${pokemon.img}`} alt="Pokémon" />
-            <p># <span>{pokemon.id}</span></p>
-            <h2>{pokemon.name}</h2>
-            {pokemon.types.map((type,index)=>(<span>{type}</span>))}
-          </div>
+            <IteamPokemons pokemon={pokemon}  />
           ) )}
         </div>
       </div>
