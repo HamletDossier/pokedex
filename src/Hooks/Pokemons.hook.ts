@@ -5,7 +5,7 @@ import { useGetPokemonsQuery } from "../Services/PokeApi.service";
 
 function HPokemones(){
     const [pokemons,setPokemons] = useState<IPokemones[]>([]);
-    const [pages,setPages] = useState<number>(0);
+    const [pages,setPages] = useState<number>(12);
     const  {data, isLoading}= useGetPokemonsQuery(0);
 
     useEffect(() =>{
