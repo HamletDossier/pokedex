@@ -16,6 +16,9 @@ const Pokemones = () => {
           ) )}
         </div>
       </div>
+      <div className="flex justify-center w-full">
+        <span className=" bg-blue-400">Load more Pokémon</span>
+      </div>
   </>)
 }
 export default Pokemones;
