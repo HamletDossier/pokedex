@@ -11,7 +11,7 @@ interface IPokemon{
     gender: boolean;
     category: string;
     abilities: string;
-    types:Types[];
+    types:string[];
     weaknesses:string[];
     hp:number;
     attack:number;

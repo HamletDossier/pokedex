@@ -7,16 +7,17 @@ const Pokemones = () => {
 
  
  const pokemons = toApi(data);
- console.log(pokemons);
   return (<>
       <div className="flex justify-center w-full">
         <div className="grid grid-cols-1">
+          {pokemons.map((pokemon,index) => (
           <div className="card">
-            <img src="https://picsum.photos/id/237/370/370" alt="Pokémon" />
-            <p>No <span>0001</span></p>
-            <h2>Pokémon</h2>
-            <span>Plant</span> <span>Veneno</span>
+            <img src={`${pokemon.img}`} alt="Pokémon" />
+            <p># <span>{pokemon.id}</span></p>
+            <h2>{pokemon.name}</h2>
+            {pokemon.types.map((type,index)=>(<span>{type}</span>))}
           </div>
+          ) )}
         </div>
       </div>
   </>)
